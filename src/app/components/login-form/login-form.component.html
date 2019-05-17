@@ -1,0 +1,7 @@
+<div style="padding: 30px;">
+    <h1>Login</h1>
+    <input type="text" [(ngModel)]="login" placeholder="Login"/>
+    <input type="password" [(ngModel)]="senha" placeholder="Senha"/>
+    <span>{{ this.aviso }}</span>
+    <button (click)="logar()">Fazer login</button>
+</div>

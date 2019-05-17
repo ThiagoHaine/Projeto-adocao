@@ -1,0 +1,7 @@
+{
+  "name": "projeto-adocao",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
