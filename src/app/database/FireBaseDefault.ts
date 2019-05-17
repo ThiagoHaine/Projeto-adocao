@@ -7,7 +7,19 @@ export class DB{
   constructor(folder:string,protected db:AngularFirestore){
     this.DBFolder=folder;
   }
-  public retorna(query:QueryFn):Observable<any[]>{
+  protected retorna(query:QueryFn):Observable<any[]>{
     return this.db.collection(this.DBFolder, query).valueChanges();
+  }
+  protected retornaAdv(query:QueryFn):Observable<any[]>{
+    return this.db.collection(this.DBFolder, query).snapshotChanges();
+  }
+  protected getId(object:any){
+    return object['payload']['doc']['id'];
+  }
+  protected adiciona(object:any):void{
+    this.db.collection(this.DBFolder).add(object);
+  }
+  protected atualiza(id:string,object:any):void{
+    this.db.doc(this.DBFolder+"/"+id).update(object);
   }
 }

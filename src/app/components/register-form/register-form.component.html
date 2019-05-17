@@ -1,0 +1,10 @@
+<div style="padding: 30px;">
+  <h1>Registrar</h1>
+  <input type="text" [(ngModel)]="nome" placeholder="Nome"/>
+  <input type="text" [(ngModel)]="login" placeholder="Login"/>
+  <input type="text" [(ngModel)]="email" placeholder="Email"/>
+  <input type="password" [(ngModel)]="senha" placeholder="Senha"/>
+  <input type="password" [(ngModel)]="senhaRepeat" placeholder="Repita a senha"/>
+  <span>{{ this.aviso }}</span>
+  <button (click)="registra()">Cadastrar</button>
+</div>

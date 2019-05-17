@@ -18,4 +18,8 @@ export class LoginDBService extends DB{
   {
     return this.retorna(i => i.where('login','==',login).where('senha','==',senha));
   }
+
+  public registrar(user:Login):void{
+    this.adiciona(user);
+  }
 }
