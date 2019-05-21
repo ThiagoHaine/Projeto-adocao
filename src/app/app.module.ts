@@ -15,6 +15,7 @@ import { firebaseConfig } from './credentials';
 import { DatabaseModule } from './database/database.module';
 
 import { FormsModule } from "@angular/forms";
+import { GlobalService } from './global';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule } from "@angular/forms";
   providers: [
     StatusBar,
     SplashScreen,
+    GlobalService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],

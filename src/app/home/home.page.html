@@ -1,4 +1,24 @@
 <ion-content>
-      <app-login-form></app-login-form>
-      <app-register-form></app-register-form>
+      <ng-container *ngIf="this.global.logado; else elseTemplate">
+            <ion-header>
+                  <ion-toolbar>
+                        <ion-buttons slot="start">
+                        <ion-back-button></ion-back-button>
+                        </ion-buttons>
+                        <ion-title>{{ this.global.user.nome }}</ion-title>
+                  </ion-toolbar>
+                  
+                  <ion-toolbar>
+                        <ion-title>Seja bem-vindo!</ion-title>
+                  </ion-toolbar>
+            </ion-header>
+      </ng-container>
+      <ng-template #elseTemplate>
+            <ng-container *ngIf="!this.global.cadastrar; else registerTemplate">
+                  <app-login-form></app-login-form>
+            </ng-container>
+            <ng-template #registerTemplate>
+                  <app-register-form></app-register-form>
+            </ng-template>
+      </ng-template>
 </ion-content>

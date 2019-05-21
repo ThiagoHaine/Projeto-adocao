@@ -7,4 +7,5 @@
   <input type="password" [(ngModel)]="senhaRepeat" placeholder="Repita a senha"/>
   <span>{{ this.aviso }}</span>
   <button (click)="registra()">Cadastrar</button>
+  <a (click)="this.global.cadastrar=false;">< Voltar</a>
 </div>

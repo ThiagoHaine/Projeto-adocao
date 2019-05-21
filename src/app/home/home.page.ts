@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { GlobalService } from '../global';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +9,7 @@ import { FormsModule } from "@angular/forms";
 })
 export class HomePage {
 
+  constructor(private global:GlobalService){
+    
+  }
 }

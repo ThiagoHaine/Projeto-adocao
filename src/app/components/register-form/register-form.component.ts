@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginDBService } from '../../database/login-db.service';
 import { Login } from '../../models/login';
+import { GlobalService } from '../../global';
+import { Md5 } from "md5-typescript";
 
 @Component({
   selector: 'app-register-form',
@@ -15,7 +17,7 @@ export class RegisterFormComponent implements OnInit {
   private email:string;
   private aviso:string;
 
-  constructor(private db:LoginDBService) {
+  constructor(private db:LoginDBService, private global:GlobalService) {
     this.login="";
     this.senha="";
     this.senhaRepeat="";
@@ -33,7 +35,7 @@ export class RegisterFormComponent implements OnInit {
     }
     this.db.registrar(<Login>{
       nome: this.nome,
-      senha: this.senha,
+      senha: Md5.init(this.senha),
       login: this.login,
       email: this.email
     });

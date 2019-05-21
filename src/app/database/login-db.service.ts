@@ -19,6 +19,9 @@ export class LoginDBService extends DB{
     return this.retorna(i => i.where('login','==',login).where('senha','==',senha));
   }
 
+  public loginData(login:Login):Observable<Login[]>{
+    return this.retornaAdv(i => i.where('login','==',login.login).where('senha','==',login.senha));
+  }
   public registrar(user:Login):void{
     this.adiciona(user);
   }

@@ -13,7 +13,7 @@ export class DB{
   protected retornaAdv(query:QueryFn):Observable<any[]>{
     return this.db.collection(this.DBFolder, query).snapshotChanges();
   }
-  protected getId(object:any){
+  public getId(object:any){
     return object['payload']['doc']['id'];
   }
   protected adiciona(object:any):void{
