@@ -1,0 +1,8 @@
+<ion-content>
+  <ng-container *ngIf="global.inchat=='-1'; else chatRoom">
+    <app-chat-list></app-chat-list>  
+  </ng-container>
+  <ng-template #chatRoom>
+    <app-chat-room></app-chat-room>
+  </ng-template>
+</ion-content>

@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { FormsModule } from "@angular/forms";
+import { ChatListComponent } from "./chat-list/chat-list.component";
+import { ChatRoomComponent } from "./chat-room/chat-room.component";
 
 @NgModule({
   declarations: [
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ChatListComponent,
+    ChatRoomComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +19,9 @@ import { FormsModule } from "@angular/forms";
   ],
   exports: [
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ChatListComponent,
+    ChatRoomComponent
   ],
   schemas:[
     NO_ERRORS_SCHEMA,

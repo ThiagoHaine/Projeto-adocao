@@ -1,24 +1,16 @@
 <ion-content>
-      <ng-container *ngIf="this.global.logado; else elseTemplate">
-            <ion-header>
-                  <ion-toolbar>
-                        <ion-buttons slot="start">
-                        <ion-back-button></ion-back-button>
-                        </ion-buttons>
-                        <ion-title>{{ this.global.user.nome }}</ion-title>
-                  </ion-toolbar>
-                  
-                  <ion-toolbar>
-                        <ion-title>Seja bem-vindo!</ion-title>
-                  </ion-toolbar>
-            </ion-header>
+      <ng-container *ngIf="this.global.logado; else loginTemplate">
+
       </ng-container>
-      <ng-template #elseTemplate>
-            <ng-container *ngIf="!this.global.cadastrar; else registerTemplate">
-                  <app-login-form></app-login-form>
-            </ng-container>
-            <ng-template #registerTemplate>
-                  <app-register-form></app-register-form>
-            </ng-template>
+      <ng-template #loginTemplate>
+            <div style="max-width: 700px; display: block; margin: auto;">
+                  <img id="logoImg" src="/assets/icone.png"/>
+                  <ng-container *ngIf="!this.global.cadastrar; else registerTemplate">
+                        <app-login-form></app-login-form>
+                  </ng-container>
+                  <ng-template #registerTemplate>
+                        <app-register-form></app-register-form>
+                  </ng-template>
+            </div>
       </ng-template>
 </ion-content>

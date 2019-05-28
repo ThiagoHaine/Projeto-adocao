@@ -7,7 +7,7 @@ export class DB{
   constructor(folder:string,protected db:AngularFirestore){
     this.DBFolder=folder;
   }
-  protected retorna(query:QueryFn):Observable<any[]>{
+  protected retorna(query?:QueryFn):Observable<any[]>{
     return this.db.collection(this.DBFolder, query).valueChanges();
   }
   protected retornaAdv(query:QueryFn):Observable<any[]>{

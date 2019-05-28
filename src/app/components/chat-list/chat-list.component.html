@@ -1,0 +1,15 @@
+<ion-list>
+    <ion-item button *ngFor="let item of show" (click)="abreSalaChat(item.nome);">
+      <ion-icon name="contact" class="contact" item-start></ion-icon>
+      <ion-label>{{ item.nome }}<br>
+        <span class="msg">{{ item.lastmsg }}</span>
+      </ion-label>
+      <ion-badge>{{ item.n }}</ion-badge>
+    </ion-item>
+</ion-list>
+<!-- fab placed to the bottom start -->
+<ion-fab vertical="bottom" horizontal="start" slot="fixed" (click)="startChat();">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

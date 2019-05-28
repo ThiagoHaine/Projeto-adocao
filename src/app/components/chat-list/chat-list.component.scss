@@ -1,0 +1,13 @@
+.msg{
+    color: gray;
+    text-indent: 15px;
+    display:block;
+}
+.msg:before{
+    content: "-";
+}
+.contact{
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+}

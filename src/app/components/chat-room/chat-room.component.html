@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-icon name="contact" item-start></ion-icon>
+      <ion-title>{{ global.inchat }}</ion-title>
+      <ion-icon name="arrow-dropleft-circle" (click)="closeChat();" style="float: right;"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+<div style="padding-top: 20px; display: block; width: 100%; height:90%; position: relative;">
+  <div style="height: calc(100% - 55px); overflow: auto;">
+    <div *ngFor="let msg of msgs">
+      <div *ngIf="msg.from==this.global.user.login" class="baloon me">
+          {{ msg.msg }}
+          <span class="date">{{ msg.date }}</span>    
+      </div>
+      <div *ngIf="msg.from!=this.global.user.login" class="baloon">
+          {{ msg.msg }}    
+          <span class="date">{{ msg.date }}</span>    
+      </div>    
+    </div>
+  </div>
+  <input type="text" [(ngModel)]="text" (keyup.enter)="enviar()" style="position: absolute; bottom: 0px; left: 0px;">
+</div>
+

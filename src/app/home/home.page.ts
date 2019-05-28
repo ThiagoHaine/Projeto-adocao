@@ -10,6 +10,5 @@ import { GlobalService } from '../global';
 export class HomePage {
 
   constructor(private global:GlobalService){
-    
   }
 }
