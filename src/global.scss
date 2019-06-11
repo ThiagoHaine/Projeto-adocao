@@ -17,4 +17,12 @@ input, button, select, textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid lightgray;
+    transition: 0.5s all;
+}
+button.red{
+    background-color: #f06666;
+    border: 2px solid #b14040;
+}
+button:hover{
+    opacity: 0.6;
 }

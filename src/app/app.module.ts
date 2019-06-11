@@ -16,6 +16,9 @@ import { DatabaseModule } from './database/database.module';
 
 import { FormsModule } from "@angular/forms";
 import { GlobalService } from './global';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,8 @@ import { GlobalService } from './global';
     StatusBar,
     SplashScreen,
     GlobalService,
+    LocalNotifications,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],

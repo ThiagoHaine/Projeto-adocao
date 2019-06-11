@@ -1,6 +1,10 @@
 <ion-content>
       <ng-container *ngIf="this.global.logado; else loginTemplate">
-
+            <div class="userPhoto">
+                  <i class="fas fa-user"></i>
+                  <img class="foto" [src]="this.global.user.foto.foto"/>
+            </div>
+            <button class="red" (click)="logout()" style="width: 80%;margin: auto;">Deslogar</button>
       </ng-container>
       <ng-template #loginTemplate>
             <div style="max-width: 700px; display: block; margin: auto;">

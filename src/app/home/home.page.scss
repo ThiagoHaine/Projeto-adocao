@@ -9,3 +9,31 @@
   position: relative;
   top: 50px;
 }
+
+.userPhoto {
+  display: block;
+  width: 50vw;
+  height: 50vw;
+  margin: 35px auto;
+  background-color: #d3d3d361;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.userPhoto .fa-user {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 28vw;
+  display: block;
+  font-size: 31vw;
+  height: 30vw;
+  color: rgba(0, 0, 0, 0.3);
+}
+.userPhoto .foto{
+  z-index: 2;
+  position: relative;
+}

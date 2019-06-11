@@ -11,7 +11,9 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
-  { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' }
+  { path: 'chat', loadChildren: './chat/chat.module#ChatPageModule' },
+  { path: 'donate', loadChildren: './donate/donate.module#DonatePageModule' },
+  { path: 'adopt', loadChildren: './adopt/adopt.module#AdoptPageModule' }
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginDBService } from './login-db.service';
 import { MessageDbService } from './message-db.service';
+import { FotoDbService } from './foto-db.service';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { MessageDbService } from './message-db.service';
   ],
   providers: [
     LoginDBService,
-    MessageDbService
+    MessageDbService,
+    FotoDbService
   ]
 })
 export class DatabaseModule { }

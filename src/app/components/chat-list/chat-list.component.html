@@ -1,10 +1,16 @@
 <ion-list>
     <ion-item button *ngFor="let item of show" (click)="abreSalaChat(item.nome);">
-      <ion-icon name="contact" class="contact" item-start></ion-icon>
+      <ng-container *ngIf="item.foto.foto==''; else elseTemplate">
+          <ion-icon name="contact" class="contact" item-start></ion-icon>  
+      </ng-container>
+      <ng-template #elseTemplate>
+          <img class="msg-foto" [src]="item.foto.foto" item-start/>  
+      </ng-template>
+      
       <ion-label>{{ item.nome }}<br>
         <span class="msg">{{ item.lastmsg }}</span>
       </ion-label>
-      <ion-badge>{{ item.n }}</ion-badge>
+      <ion-badge *ngIf="item.n!=0">{{ item.n }}</ion-badge>
     </ion-item>
 </ion-list>
 <!-- fab placed to the bottom start -->

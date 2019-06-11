@@ -1,12 +1,18 @@
 <ion-header>
     <ion-toolbar>
-      <ion-icon name="contact" item-start></ion-icon>
+      <ng-container *ngIf="this.foto.foto==''; else elseTemplate">
+          <ion-icon name="contact" item-start></ion-icon>  
+      </ng-container>
+      <ng-template #elseTemplate>
+        <img [src]="this.foto.foto" class="foto" item-start/>
+      </ng-template>
+      
       <ion-title>{{ global.inchat }}</ion-title>
       <ion-icon name="arrow-dropleft-circle" (click)="closeChat();" style="float: right;"></ion-icon>
     </ion-toolbar>
 </ion-header>
 <div style="padding-top: 20px; display: block; width: 100%; height:90%; position: relative;">
-  <div style="height: calc(100% - 55px); overflow: auto;">
+  <div style="height: calc(100% - 55px); overflow: auto;" id="msgSpace">
     <div *ngFor="let msg of msgs">
       <div *ngIf="msg.from==this.global.user.login" class="baloon me">
           {{ msg.msg }}

@@ -32,6 +32,13 @@ ion-icon {
     z-index: 1;
 
 }
+.foto{
+    display: inline-block;
+    width: 45px;
+    height: 45px !important;
+    border-radius: 100%;
+    border: 1px solid lightgray;
+}
 .baloon.me {
 
     margin-left: calc(20% - 20px);
