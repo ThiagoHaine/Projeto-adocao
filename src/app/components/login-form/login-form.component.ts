@@ -50,15 +50,17 @@ export class LoginFormComponent implements OnInit {
           login: result[0].login,
           foto: ""
         };
-        let fotoscribe:Subscription=this.fotoDB.getFoto(result[0].login).subscribe(foto=>{
+        this.fotoDB.getFoto(result[0].login).subscribe(foto=>{
           this.global.user.foto=foto[0];
-          let datascribe:Subscription=this.db.loginData(result[0]).subscribe(a=>{
-            this.global.userid=this.db.getId(a[0]);
-            this.global.logado=true;
-            datascribe.unsubscribe();
-          });
-          fotoscribe.unsubscribe();
+          if (this.global.logado==false){
+            let datascribe:Subscription=this.db.loginData(result[0]).subscribe(a=>{
+              this.global.userid=this.db.getId(a[0]);
+              this.global.logado=true;
+              datascribe.unsubscribe();
+            });
+          }
         });
+
         this.msgDb.escuta(result[0].login).subscribe(msgs=>{
           let notifications:ILocalNotification[]=[]
 
