@@ -1,0 +1,31 @@
+.userPhoto{
+    width: 50vw;
+    height: 50vw;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    position: relative;
+    margin: 55px auto;
+    overflow: hidden;
+}
+.userPhoto i{
+    font-size: 120px;
+    display: block;
+    width: 120px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    margin: auto;
+    color: rgba(0,0,0,0.3);
+}
+label{
+    margin: 10px;
+}
+.foto {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}

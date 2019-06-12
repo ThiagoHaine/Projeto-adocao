@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { firebaseConfig } from './credentials';
 import { DatabaseModule } from './database/database.module';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { FormsModule } from "@angular/forms";
 import { GlobalService } from './global';
@@ -40,6 +41,7 @@ import { Camera } from '@ionic-native/camera/ngx';
     GlobalService,
     LocalNotifications,
     Camera,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],

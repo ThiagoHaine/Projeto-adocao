@@ -1,0 +1,18 @@
+<ion-content>
+    <div class="userPhoto" (click)="tirarFoto()">
+        <i class="fas fa-camera-retro"></i>
+        <img class="foto" [src]="this.foto"/>
+    </div>
+
+    <input type="text" [(ngModel)]="nome" placeholder="Nome">
+    <input type="text" [(ngModel)]="especie" placeholder="Especie">
+    <input type="text" [(ngModel)]="raca" placeholder="Raça">
+    <select [(ngModel)]="genero">
+        <option selected disabled value="">Gênero</option>
+        <option value="Macho">Macho</option>
+        <option value="Fêmea">Fêmea</option>
+    </select>
+    <label for="idade">Idade</label>
+    <input id="idade" [(ngModel)]="idade" type="number">
+    <button (click)="doar()">Doar</button>
+</ion-content>
