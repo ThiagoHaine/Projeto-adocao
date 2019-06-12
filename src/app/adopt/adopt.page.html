@@ -1,9 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>adopt</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-card *ngFor="let pet of lista">
+    <img [src]="pet.foto"/>
+    <ion-card-header>
+      <ion-card-subtitle>{{ pet.nome }}</ion-card-subtitle>
+      <ion-card-title>{{ pet.especie }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Raça: {{ pet.raca }}<br>
+      Gênero: {{ pet.genero }}<br>
+      Dono atual: {{ pet.usuario }}<br>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

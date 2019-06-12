@@ -2,7 +2,7 @@ export class Geoposition {
     private latitude:number;
     private longitude:number;
 
-    public Geoposition(lat:number,long:number){
+    public constructor(lat:number,long:number){
         this.latitude = lat;
         this.longitude = long;
     }
